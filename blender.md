@@ -3,9 +3,7 @@
 Compiled while working with Blender 2.92.0 on Mac OS X.
 
 
-## Shortcuts
-
-### 3D viewport
+## 3D viewport
 
 * Navigation
   - `Scroll` - Orbit
@@ -26,6 +24,13 @@ Compiled while working with Blender 2.92.0 on Mac OS X.
     - to select multiple: hold `Shift`
   - `A` - select all
   - `A A` - deselect all
+* Create/delete objects
+  - `Shift` + `A` - Add
+  - `X` - Delete
+  - `Shift` + `D` - Duplicate
+* Modify object
+  - `Ctrl + A` - Apply
+    - `All Transforms`: normalize location/rotation/scale
 <!-- -->
 * 3D cursor (where new objects are created)
   - `Shift` + `R click` - change cursor position
@@ -40,16 +45,16 @@ Compiled while working with Blender 2.92.0 on Mac OS X.
 * `T` - Toggle Toolbar
 * `N` - Toggle Context
 <!-- -->
-* `Shift` + `A` - Add
-* `X` - Delete
-* `Shift` + `D` - Duplicate
-<!-- -->
 * `Shift` + `Z` - X-ray mode
 <!-- -->
 * `F12` - Render
 
 
-### (default) Render engines
+### Edit mode
+
+
+
+## (default) Render engines
 
 * Eevee
   - Real-time, but less realistic
@@ -58,7 +63,7 @@ Compiled while working with Blender 2.92.0 on Mac OS X.
   - Raytracing engine; slower but more realistic
 
 
-# Materials
+## Materials
 
 
 
