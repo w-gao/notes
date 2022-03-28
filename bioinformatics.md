@@ -66,12 +66,28 @@ An aligner takes a number of reads (FASTQ file) and a reference sequence, and al
     * _
 
 
-### Genome Browser
+### UCSC Genome Browser
 
-The genome browser works in a coordinate system; it needs an alignment instead of the raw DNA sequence
+<!-- BME 110 Spring 2021 -->
+- The UCSC genome browser works in a coordinate system; it needs an **alignment** instead of the raw DNA sequence
+
+#### Data formats
 
 - Browser Extensible Data (BED) `.bed`
     * Wikipedia [\*link\*](https://en.wikipedia.org/wiki/BED_(file_format))
+- Wiggle Track (WIG) `.wig`
+    * Docs [\*link\*](https://genome.ucsc.edu/goldenPath/help/wiggle.html)
+    * Display of dense, continuous data such as GC content, probability scores, and transcriptome data
+- Multiple Alignment Format (MAF) `.maf`
+    * "stores multiple alignments at the DNA level between entire genomes"
+- Other supported data formats [\*link\*](https://genome.ucsc.edu/FAQ/FAQformat.html)
+
+
+### BLAST
+
+To align and compare DNA/protein sequences
+
+- NCBI quick start guide [\*link\*](https://www.ncbi.nlm.nih.gov/books/NBK1734/)
 
 
 
