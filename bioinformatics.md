@@ -7,10 +7,11 @@
 High-level overview
 
 ```
-# ┌───────┐ align to  ┌───────────┐  variant  ┌─────┐
-# │ FASTQ ├──────────►│ SAM / BAM ├──────────►│ VCF │
-# └───────┘ reference └───────────┘  calling  └─────┘
-#  sequence             alignments            variants
+#    reads
+# ┌─────────┐ align to  ┌───────────┐  variant  ┌─────────┐
+# │  FASTQ  ├──────────►│ SAM / BAM ├──────────►│   VCF   │
+# └─────────┘ reference └───────────┘  calling  └─────────┘
+#  sequences             alignments              variants
 ```
 <!-- https://tinyurl.com/d373myk5 -->
 
@@ -18,13 +19,14 @@ High-level overview
 ### Sequence storage
 
 - FASTA - `.fasta`, `.fa`
-    * text-based format for storing nucleotide or peptide sequences
+  - text-based format for storing nucleotide or peptide sequences
 - FASTA index - `.fa.fai`
-    * index file in conjuction with a FASTA file
-    * allows "efficient access to arbitrary regions within those reference sequences" [\*link\*](http://manpages.ubuntu.com/manpages/bionic/man5/faidx.5.html)
+  - index file in conjuction with a FASTA file
+  - allows "efficient access to arbitrary regions within those reference sequences" [\*link\*](http://manpages.ubuntu.com/manpages/bionic/man5/faidx.5.html)
 - FASTQ - `.fastq`
-    * text-based format for storing sequences + its corresponding quality scores
-    * extension from FASTA
+  - text-based format for storing sequences + its corresponding quality scores
+  - usually for storing reads
+  - extension from FASTA
 
 
 ### Alignment/sequence
