@@ -7,9 +7,9 @@
 
 ## Normal mode
 
-### Move cursor
+### Move cursor (motion)
 
-- `j`, `k`: up, down
+- `j`, `k`: down, up
 - `h`, `l`: left, right
 - `b`, `w`: left, right word
 - `{`, `}`: up, down block
@@ -20,22 +20,15 @@
 
 ### Cut / copy / paste
 
-- `dd`: cut line (delete line and copy to buffer)
-- `yy`: copy (yank) line
+- `d` + motion: cut (delete and copy), e.g.:
+  - `dw`: cut word
+  - `dd`: cut line
+  - `d5j`: cut next 5 lines
+- `y` + motion: copy (yank), e.g.:
+  - `yw`: copy word
+  - `yy`: copy line
 - `P`: paste before cursor
 - `p`: paste after cursor
-- Note: in _visual mode_, `y`: copy block
-
-
-### Selection (visual mode)
-
-- `v`: select characters
-- `V`: select lines
-- `ctrl + V`: select blocks
-  - useful for adding / removing multi-line comments, for example
-- once selected, cut and copy are:
-  - `d` or `x`: cut (delete and copy to buffer)
-  - `y`: copy
 
 
 ### Undo / redo
@@ -44,10 +37,38 @@
 - `ctrl + R`: redo
 
 
-### Insertion mode
+### Enter visual mode
+
+- `v`: select characters
+- `V`: select lines
+- `ctrl + V`: select blocks
+  - useful for adding / removing multi-line comments, for example
+
+
+### Enter insertion mode
 
 - `i`: go to insertion mode
 - `o`: go to insertion mode at next line
+
+
+## Visual mode
+
+- cut and copy
+  - `d` or `x`: ut (delete and copy to buffer)
+  - `y`: copy
+- `>` and `<`: indent and dedent
+- e.g.: `2>`: indent twice
+- `~`: flip characters (upper <-> lower)
+- `U`: turn all to uppercase
+- `u`: turn all to lowercase
+
+
+## Markers
+
+- `m<reg>`: mark cursor and store to any registers
+  - e.g.: `ma`: mark and store to register a
+- `\`<reg>`: jump to marker at register (exact place)
+- `'<reg>`: jump to marker at register (line)
 
 
 ## Search
@@ -86,4 +107,15 @@
 
 See: https://stackoverflow.com/a/15588798
 
+
+
+## Misc
+
+Normal mode
+
+- `gUU`: turn entire line to uppercase
+- `guu`: turn entire line to lowercase
+
+- `ctrl + A`: increment number under cursor
+- `ctrl + X`: decrement number under cursor
 
