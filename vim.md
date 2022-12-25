@@ -108,6 +108,29 @@
 See: https://stackoverflow.com/a/15588798
 
 
+## Split windows
+
+- `ctrl + W s`: split window (horizontal)
+- `ctrl + W v`: split window (vertical)
+- `ctrl + W <kjhl>` move between splits
+- `ctrl + W w`: go to next window
+- `ctrl + W x`: exchange two windows
+- `ctrl + W q`: quit current window
+- Commands
+  - `:sp` or `split`: split window
+  - `:vsp`: vertical split
+    - `:vsp <filename>`: vertical split new file
+  - `:e <filename>`: change current file
+
+
+## Different tabs
+
+- To open multiple file in terminal: `vim -p file1 file2 file3`
+- To open new file in vim: `:tabedit file`
+- `gt` - go to next tab
+- `gT` - go to previous tab
+- `<num> gt` - go to tab
+
 
 ## Misc
 
@@ -118,4 +141,11 @@ Normal mode
 
 - `ctrl + A`: increment number under cursor
 - `ctrl + X`: decrement number under cursor
+
+
+Commands
+
+- `:Explore` - built-in file explorer
+- `:Lex` - similar to above, but stays open when opening files
+
 
