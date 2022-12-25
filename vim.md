@@ -2,7 +2,7 @@
 
 - Created on March 28, 2021
 - Updated on Dec 16, 2021
-- Updated on Dec 21, 2022
+- Updated on Dec 25, 2022
 
 
 ## Normal mode
@@ -16,6 +16,12 @@
 - `gg`: top of file
 - `G`: bottom of file
 - Note: prepending a number before the command would execute that command # times (e.g.: `10j`: move down 10 lines)
+- More motions
+  - `B`, `W`: left, right word (spaces only)
+  - `t + <sym>`: move to first occurance of symbol
+  - `0`: to beginning of line
+  - `^` (or `0w`): to first non-space character of line
+  - `$`: to end of line
 
 
 ### Cut / copy / paste
@@ -24,6 +30,7 @@
   - `dw`: cut word
   - `dd`: cut line
   - `d5j`: cut next 5 lines
+- `D`: cut from cursor to end of line
 - `y` + motion: copy (yank), e.g.:
   - `yw`: copy word
   - `yy`: copy line
@@ -37,6 +44,12 @@
 - `ctrl + R`: redo
 
 
+### Quick change
+
+- `x`: delete character under cursor
+- `r`: replace charater under cursor
+
+
 ### Enter visual mode
 
 - `v`: select characters
@@ -47,15 +60,19 @@
 
 ### Enter insertion mode
 
-- `i`: go to insertion mode
-- `o`: go to insertion mode at next line
+- `i`: enter insertion mode
+- `o`: begin new line below cursor and enter insertion mode
+- `O`: begin new line above cursor and enter insertion mode
+- `A`: enter insertion mode at the end of line
+- `c` + motion: cut text selected by motion, then enter insertion mode
+- `C`: similar to `D`, cut from cursor to end of line, then enter insertion mode
 
 
 ## Visual mode
 
 - cut and copy
-  - `d` or `x`: ut (delete and copy to buffer)
-  - `y`: copy
+  - `d` or `x`: cut
+  - `y`: copy (yank)
 - `>` and `<`: indent and dedent
 - e.g.: `2>`: indent twice
 - `~`: flip characters (upper <-> lower)
@@ -74,7 +91,7 @@
 ## Search
 
 - `/` + term, hit enter
-- `N`: next, `shift + N`: previous
+- `N`: go to next, `shift + N`: go to previous
 
 
 ## Adding / removing multi-line comments
@@ -112,11 +129,24 @@ See: https://stackoverflow.com/a/15588798
 
 - `ctrl + W s`: split window (horizontal)
 - `ctrl + W v`: split window (vertical)
-- `ctrl + W <kjhl>` move between splits
-- `ctrl + W w`: go to next window
-- `ctrl + W x`: exchange two windows
 - `ctrl + W q`: quit current window
-- Commands
+- moving between windows
+  - `ctrl + W <kjhl>`: move between splits
+  - `ctrl + W p`: go to previous window
+  - `ctrl + W w`: go to next window
+  - `ctrl + W t`: go top top left window
+  - `ctrl + W b`: go to bottom right window
+- moving windows
+  - `ctrl + W x`: exchange two windows
+  - `ctrl + W r`: rotate windows
+  - `ctrl + W R`: rotate (in opposite direction)
+- resizing
+  - `ctrl + W <num> +` or `ctrl + W <num> -`: resize currernt window height
+  - `ctrl + W <num> <` or `ctrl + W <num> >`: resize current window width
+  - `ctrl + W \_`: resize window to max height
+  - `ctrl + W |`: resize window to max width
+  - `ctrl + W =`: resize all windows to equal dimensions
+- commands
   - `:sp` or `split`: split window
   - `:vsp`: vertical split
     - `:vsp <filename>`: vertical split new file
@@ -127,9 +157,9 @@ See: https://stackoverflow.com/a/15588798
 
 - To open multiple file in terminal: `vim -p file1 file2 file3`
 - To open new file in vim: `:tabedit file`
-- `gt` - go to next tab
-- `gT` - go to previous tab
-- `<num> gt` - go to tab
+- `gt`: go to next tab
+- `gT`: go to previous tab
+- `<num> gt`: go to tab
 
 
 ## Misc
