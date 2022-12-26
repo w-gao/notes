@@ -54,6 +54,7 @@
 - `x`: delete character under cursor
 - `r`: replace charater under cursor
 - `>>` and `<<`: indent and dedent
+- `==`: auto indent
 
 
 ### Undo / redo
@@ -89,7 +90,8 @@
   - `d` or `x`: cut
   - `y`: copy (yank)
 - `>` and `<`: indent and dedent
-- e.g.: `2>`: indent twice
+  - e.g.: `2>`: indent twice
+- `=`: auto indent
 - `~`: flip characters (upper <-> lower)
 - `U`: turn all to uppercase
 - `u`: turn all to lowercase
@@ -183,7 +185,6 @@ Normal mode
 
 - `gUU`: turn entire line to uppercase
 - `guu`: turn entire line to lowercase
-
 - `ctrl + A`: increment number under cursor
 - `ctrl + X`: decrement number under cursor
 
