@@ -8,10 +8,10 @@ High-level overview
 
 ```
 #    reads
-# ┌─────────┐ align to  ┌───────────┐  variant  ┌─────────┐
-# │  FASTQ  ├──────────►│ SAM / BAM ├──────────►│   VCF   │
-# └─────────┘ reference └───────────┘  calling  └─────────┘
-#  sequences             alignments              variants
+# ┌───────────┐  align to   ┌─────────────┐   variant   ┌───────────┐
+# │   FASTQ   ├────────────►│  SAM / BAM  ├────────────►│    VCF    │
+# └───────────┘  reference  └─────────────┘   calling   └───────────┘
+#   sequences                 alignments                  variants
 ```
 <!-- https://tinyurl.com/d373myk5 -->
 
