@@ -97,6 +97,15 @@
 - `u`: turn all to lowercase
 
 
+## Registers
+
+- `"<reg>` + action: perform action from/to register, e.g.:
+  - `"a dw`: cut word, store to register a
+  - `"a p`: paste register a
+  - `"+ dd`: cut line, store to system clipboard
+  - `"+ p`: paste from system clipboard
+
+
 ## Markers
 
 - `m<reg>`: mark cursor and store to any registers
