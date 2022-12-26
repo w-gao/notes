@@ -17,11 +17,16 @@
 - `G`: bottom of file
 - Note: prepending a number before the command would execute that command # times (e.g.: `10j`: move down 10 lines)
 - More motions
+  - `e`: end of word
   - `B`, `W`: left, right word (spaces only)
-  - `t + <sym>`: move to first occurance of symbol
+  - `f + <sym>`: find first occurance of symbol
+    - `F + <sym>`: find left (backwards)
+  - `t + <sym>`: move **till** first occurance of symbol
+    - `T + <sym>`: move left (backwards)
   - `0`: to beginning of line
   - `^` (or `0w`): to first non-space character of line
   - `$`: to end of line
+  - `%`: to matching braket
 
 
 ### Cut / copy / paste
@@ -30,24 +35,31 @@
   - `dw`: cut word
   - `dd`: cut line
   - `d5j`: cut next 5 lines
+  - or, `diw`: delete the word the cursor is in
 - `D`: cut from cursor to end of line
 - `y` + motion: copy (yank), e.g.:
   - `yw`: copy word
   - `yy`: copy line
+- when cursor is inside a word, `"`, `(`, `[`, or `{`,
+  - `di + <sym>`: delete everything inside block
+  - `da + <sym>`: delete everything inside block (including symbols)
+  - works for `y`, `c` as well, e.g.:
+    - `ci[`: change text inside `[xxx]`
 - `P`: paste before cursor
 - `p`: paste after cursor
+
+
+### Quick changes
+
+- `x`: delete character under cursor
+- `r`: replace charater under cursor
+- `>>` and `<<`: indent and dedent
 
 
 ### Undo / redo
 
 - `u`: undo
 - `ctrl + R`: redo
-
-
-### Quick change
-
-- `x`: delete character under cursor
-- `r`: replace charater under cursor
 
 
 ### Enter visual mode
@@ -61,11 +73,14 @@
 ### Enter insertion mode
 
 - `i`: enter insertion mode
+- `a`: enter insertion mode (append after cursor)
 - `o`: begin new line below cursor and enter insertion mode
 - `O`: begin new line above cursor and enter insertion mode
+- `I`: enter insertion mode at the beginning of line
 - `A`: enter insertion mode at the end of line
 - `c` + motion: cut text selected by motion, then enter insertion mode
-- `C`: similar to `D`, cut from cursor to end of line, then enter insertion mode
+  - `cc`: cut entire line, then enter insertion mode
+- `C` + motion: similar to `D`, cut from cursor to end of line, then enter insertion mode
 
 
 ## Visual mode
