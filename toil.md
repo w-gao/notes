@@ -6,7 +6,7 @@
 
 - The nodes with the given node types will be created at once when the `toil launch-cluster` command is run.
 
-```shell
+```console
 TOIL_APPLIANCE_SELF=quay.io/ucsc_cgl/toil:5.3.0 \
 toil launch-cluster **cluster-name** \
       --leaderNodeType t2.small \
@@ -19,7 +19,7 @@ toil launch-cluster **cluster-name** \
 
 #### Launch a mesos (or kubernetes) auto scaling cluster
 
-```shell
+```console
 TOIL_APPLIANCE_SELF=quay.io/ucsc_cgl/toil:5.3.0 \
 toil launch-cluster **cluster-name** \
       --provisioner aws \
@@ -38,7 +38,7 @@ toil launch-cluster **cluster-name** \
 
 - make sure to specify the zone
 
-```shell
+```console
 toil destroy-cluster -z us-west-2a **cluster-name** --logDebug
 ```
 
@@ -56,6 +56,29 @@ Setting up a local k8s cluster was easy enough, with a few caveats:
 
 1. Configuring AWS access key as a kubectl secret
 
+Assuming `credentials` is in the current working directory:
+
+```
+[default]
+aws_access_key_id = XXX
+aws_secret_access_key = XXX
+aws_session_token = XXX
+```
+
+Note: This should be a temporary credential from AWS so that it'll not ask for MFA when it's inside the cluster.
+
+To create the kubectl secret:
+
+```console
+k create secret generic aws-credentials --from-file credentials --namespace toil
+```
+
+Other related commands:
+
+```console
+k get secrets --namespace toil
+k delete secret aws-credentials --namespace toil
+```
 
 
 2. Enabling the metrics server
@@ -85,8 +108,9 @@ minikube dashboard
 
 ## EC2
 
-* commands to check logs on EC2
-```
+### Commands to check logs on EC2
+
+```console
 journalctl -b -t ignition --no-pager
 journalctl -xeu kubelet
 
@@ -95,4 +119,3 @@ systemctl status toil-worker.service
 
 systemctl status create-kubernetes-cluster.service
 ```
-
