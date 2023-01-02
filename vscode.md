@@ -1,12 +1,17 @@
 # vscode
 
+Notes related to Visual Studio Code.
+
+
 ## Keyboard shortcuts
 
 ### Everywhere
 
 - `cmd + P`: go to file
 - `cmd + shift + P`: show all commands
-- `ctrl + \``: open terminal
+- `ctrl + \` `: open terminal
+- `cmd + shift + N`: new window
+
 
 ### Navigation
 
@@ -26,3 +31,4 @@
 - `cmd + /`: comment/uncomment code
 - multiple cursors
   - `alt + click`
+- `control + shift + tab`: switch between tabs
