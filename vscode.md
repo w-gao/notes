@@ -10,6 +10,7 @@ Notes related to Visual Studio Code.
 - `cmd + P`: go to file
 - `cmd + shift + P`: show all commands
 - `ctrl + \` `: open terminal
+- `cmd + N`: new file
 - `cmd + shift + N`: new window
 
 
