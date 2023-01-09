@@ -22,6 +22,7 @@ Useful keyboard shortcuts in Mac OS.
 - For most applications...
     - `cmd + W`: close window
     - `cmd + N`: new window
+    - `cmd + M`: minimize window
     - `cmd + Plus/Minus`: Zoom in/out
     - `cmd + F`: find
     - `cmd + P`: print
